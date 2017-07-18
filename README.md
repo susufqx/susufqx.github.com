@@ -1,1 +1,1 @@
-# susufqx.github.com
+# Blog of SusuFQX
