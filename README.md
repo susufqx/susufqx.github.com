@@ -1,1 +1,1 @@
-# Blog of SusuFQX
+# SusuFQX's Blog
