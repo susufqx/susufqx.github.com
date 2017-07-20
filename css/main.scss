@@ -3,8 +3,42 @@
 ---
 @charset "utf-8";
 
+.index-page{
+  .grid.blog-grid{
+    .basic.label{
+      margin: 0.2em 0.2em;
+    }
+    padding-top: 2em;
+    padding-left: 4em;
+    padding-bottom: 6em;
+  }
+  .blog-part{
+    .comment.blog-list{
+      .content{
+        .author{
+          font-size: 28px;
+          color:#454545;
+        }
+        .metadata{
+          span{
+            font-size: 18px;
+          }
+        }
+        .text{
+          font-size: 20px;
+          font-style: oblique;
+          text-align: left;
+        }
+      }
+    }
+  }
+  .label{
+    padding:2em, 2em;
+  }
+}
 
 
+/*
 // Our variables
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
@@ -95,3 +129,4 @@ $anim-speed: 0.3s;
         "util",
         "site"
 ;
+*/

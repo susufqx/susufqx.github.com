@@ -2,27 +2,46 @@
 layout: default
 ---
 
-<div class="home">
- <div class="top card">
-    <a class="email" href="mailto:{{site.email}}">{{site.email}}</a>
-    <p class="description">{{ site.description }}</p>
-    <a href="about" class="btn">Read More</a>
-  </div>
-  <div class="posts card">
-      <div class="card-content white-text">
-      <span class="card-title">The Blogs</span>
-
-      <ul class="post-list">
-        {% for post in site.posts %}
-          <li>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-
-      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<div class="ui masthead center aligned segment index-page">
+  <div class="ui stackable grid">
+    <div class="six wide column">
+      <a class="ui divider"></a>
+    </br></br>
+      <a class="ui blue basic label">IT (0)</a>
+      <a class="ui blue basic label">History (0)</a>
+      <a class="ui blue basic label">Society (0)</a>
+      </br></br>
+      <a class="ui blue basic label">Science (0)</a>
+      <a class="ui blue basic label">Games (0)</a>
+      <a class="ui blue basic label">Maths (0)</a>
+      </br></br>
+      <a class="ui blue basic label">Sports (0)</a>
+      <a class="ui blue basic label">Thinking (0)</a>
+      <a class="ui blue basic label">Economy (0)</a>
+      </br></br>
+      <a class="ui blue basic label">Politic (0)</a>
+      <a class="ui blue basic label">Culture (0)</a>
+      <a class="ui divider"></a>
+    </div>
+    <div class="ten wide column blog-part">
+      <div class="ui divider"></div>
+      <div class="ui comments">
+        <div class="comment blog-list">
+          {% for post in site.posts %}
+            <div class="content">
+              <a class="author"  href="{{post.url | prepend: site.baseurl}}">{{ post.title }}</a>
+              <div class="metadata">
+                <span class="date">{{post.date | date: "%B %-d, %Y"}}</span>
+              </div>
+              <div class="text">
+                {{ post.content | strip_html | truncate:200 }}
+              </div>
+            </div>
+            <div class="ui divider"></div>
+          {% endfor %}
+        </div>
       </div>
-   </div>
-
+      <!--<p class="ui primary button">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
+    </div>
+  </div>
 </div>
