@@ -47,12 +47,18 @@
 
 /* Post page style */
 .post-page{
+  @media only screen and (min-width: 768px){
+    .ui.container{
+      padding:  6em 8em;
+    }
+  }
+  @media only screen and (max-width: 767px){
+    .ui.container{
+      padding:  1em 1em;
+    }
+  }
   .ui.container{
     background-color: #E5E5E5;
-    padding-top: 50px;
-    padding-left: 180px;
-    padding-right: 180px;
-    padding-bottom: 50px;
     text-align: left;
   }
 }
