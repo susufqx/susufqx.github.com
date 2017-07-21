@@ -29,12 +29,12 @@ layout: default
         <div class="comment blog-list">
           {% for post in site.posts %}
             <div class="content">
-              <a class="author"  href="{{post.url | prepend: site.baseurl}}">{{ post.title }}</a>
+              <a class="title"  href="{{post.url | prepend: site.baseurl}}">{{ post.title }}</a>
               <div class="metadata">
                 <span class="date">{{post.date | date: "%B %-d, %Y"}}</span>
               </div>
               <div class="text">
-                {{ post.content | strip_html | truncate:200 }}
+                {{ post.content | strip_html | truncate:120 }}
               </div>
             </div>
             <div class="ui divider"></div>

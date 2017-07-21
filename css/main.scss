@@ -10,7 +10,7 @@
   }
 }
 
-/* header style */
+/* index style */
 .index-page{
   .grid.blog-grid{
     .basic.label{
@@ -23,19 +23,22 @@
   .blog-part{
     .comment.blog-list{
       .content{
-        .author{
+        background-color: #F5FFFA;
+        text-align: left !important;
+        .title{
+          font-weight: bold;
           font-size: 28px;
-          color:#454545;
+          color:#282828;
         }
         .metadata{
           span{
             font-size: 18px;
+            color: #778899;
           }
         }
         .text{
           font-size: 20px;
-          font-style: oblique;
-          text-align: left;
+          font-style:italic;
         }
       }
     }
