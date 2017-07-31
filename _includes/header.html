@@ -8,18 +8,17 @@
       </div>
       {%if page.title%}
         <h1>{{page.title}}</h1>
-      {%else%}
-        {%if post.title%}
-          <h1>{{post.title}}</h1>
-        {%else%}
-          <h1 class="ui inverted ">
-            SusuFQX's Blog
-          </h1>
-          <div class="main blog-part">
-            <p class="description">{{ site.description }}</p>
-            <a href="about" class="ui inverted button">Read More</a>
+          <div class="metadata">
+            <span class="date"><h2>{{page.date | date: "%B %-d, %Y"}}</h2></span>
           </div>
-        {%endif%}
+      {%else%}
+        <h1 class="ui inverted ">
+          SusuFQX's Blog
+        </h1>
+        <div class="main blog-part">
+          <p class="description">{{ site.description }}</p>
+          <a href="about" class="ui inverted button">Read More</a>
+        </div>
       {%endif%}
     </div>
   </div>
