@@ -1,47 +1,27 @@
 ---
 layout: default
 ---
-
-<div class="ui masthead center aligned segment index-page">
-  <div class="ui stackable grid">
-    <div class="six wide column">
-      <a class="ui divider"></a>
-    </br></br>
-      <a class="ui blue basic label">IT (0)</a>
-      <a class="ui blue basic label">History (0)</a>
-      <a class="ui blue basic label">Society (0)</a>
-      </br></br>
-      <a class="ui blue basic label">Science (0)</a>
-      <a class="ui blue basic label">Games (0)</a>
-      <a class="ui blue basic label">Maths (0)</a>
-      </br></br>
-      <a class="ui blue basic label">Sports (0)</a>
-      <a class="ui blue basic label">Thinking (0)</a>
-      <a class="ui blue basic label">Economy (0)</a>
-      </br></br>
-      <a class="ui blue basic label">Politic (0)</a>
-      <a class="ui blue basic label">Culture (0)</a>
-      <a class="ui divider"></a>
-    </div>
-    <div class="ten wide column blog-part">
-      <div class="ui divider"></div>
-      <div class="ui comments">
-        <div class="comment blog-list">
-          {% for post in site.posts %}
-            <div class="content">
-              <a class="title"  href="{{post.url | prepend: site.baseurl}}">{{ post.title }}</a>
-              <div class="metadata">
-                <span class="date">{{post.date | date: "%B %-d, %Y"}}</span>
-              </div>
-              <div class="text">
-                {{ post.content | strip_html | truncate:180 }}
-              </div>
-            </div>
-            <div class="ui divider"></div>
-          {% endfor %}
+<div class="ui middle aligned stackable grid container post-part">
+  <div class="ui two columns grid">
+    <div class="twelve wide column">
+      {% for post in site.posts %}
+        <div class="post-preview">
+          <h2><a href="{{post.url | prepend: site.baseurl}}">{{ post.title }}</a></h2>
+          <p>{{ post.content | strip_html | truncate:160 }}</p>
+          <div class="metadata">
+            <span class="date">{{post.date | date: "%B %-d, %Y"}}</span>
+          </div>
         </div>
+      {% endfor %}
+    </div>
+    <div class="four wide right column">
+      <div class="ui blue labels">
+        {% for tag in site.tags %}
+          <a class="ui basic label" href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+            {{ tag[0] }}
+          </a>
+        {% endfor %}
       </div>
-      <!--<p class="ui primary button">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
     </div>
   </div>
 </div>

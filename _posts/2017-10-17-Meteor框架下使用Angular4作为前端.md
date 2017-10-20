@@ -3,8 +3,14 @@ layout: post
 title:  "Meteor框架下使用Angular4作为前端"
 date:   2017-10-17 02:04
 categories: blog
+tags:
+    - Meteor
+    - Angular4
+    - JavaScript
+    - FullStack
+    - TypeScript
 ---
-#### 一、meteor框架
+### 一、meteor框架
 
 Meteor是一个开源的使用Node.JS的支持全栈开发的框架。具体信息和文档可以搜索meteor官网进行查看。
 
@@ -20,7 +26,7 @@ $ meteor create meteor-angular4-app
 ```
 这样我们的```app```已经创立好了，```$cd meteor-angular4-app```，我们可以进入到```app```的文件夹，然后执行```$meteor run```就运行了该程序，浏览器输入"localhost:3000"来查看。
 
-#### 二、angular4和meteor
+### 二、angular4和meteor
 
 angular4是目前angular最新的版本，对于移动app和web都有很良好的支持。其实meteor的官方网站上有meteor配合angular的案列和使用方法，可是那还是angular1的版本，与现在的angular大相径庭。angular的开发者们为了使得该框架更加便于程序员们使用，从beta版的angular2时代起就选择了TypeScript作为主要开发语言。beta版本的angular与angular1同时存在了很久，直到2016年才发布第一个正式版，不久就进一步优化，发布了如今的angular4。对于写后端尤其是java的程序员来说，angular4简直就是得心应手。
 
@@ -94,7 +100,7 @@ $ meteor add angular2-compilers
 $ meteor add dynamic-import
 ```
 
-#### 三、npm导入angular4的依赖包
+### 三、npm导入angular4的依赖包
 由于angular4使用的是npm包管理，于是我们只要添加对应的包即可安装angular4。注意，在meteor的应用下，所有的npm命令前面推荐添加上meteor，也就是```meteor npm ...```。
 
 我们进入app，然后输入，
@@ -109,4 +115,4 @@ $ meteor npm install autoprefixer, meteor-typings --save-dev
 
 至此，angular4在meteor中的环境基本搭建完成，下面我们需要简单地添加一些必要文件，因为angular4属于前端，因此所有文件均在```client```文件夹下。
 
-#### 四，构建基本angular4的文件
+### 四，构建基本angular4的文件

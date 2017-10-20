@@ -1,0 +1,30 @@
+---
+title: Tags
+layout: tag
+---
+<header class="main-header">
+  <div class="ui inverted vertical masthead center aligned segment" style="background: url('/assets/hero.jpg')">
+    <a href="/"><i class="huge white home icon"></i></a>
+    <div class="ui text container header" style="padding-top:100px;padding-bottom:100px">
+      <div class="header">
+        <i class="massive orange tags icon"></i>
+      </div>
+      <h1 class="ui inverted" style="color:orange">
+          TAGS
+      </h1>
+    </div>
+  </div>
+</header>
+
+<article class="ui masthead center aligned segment">
+  <div class="ui text container">
+    <div id='tag_cloud' class="tags">
+				{% for tag in site.tags %}
+          <div class="row left floated">
+            <i class="big tag blue icon"></i>
+				    <a class="ui blue basic label" href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+          </div>
+        {% endfor %}
+			</div>
+  </div>
+</article>
