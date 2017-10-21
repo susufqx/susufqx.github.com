@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="doubling stackable two column ui grid container post-part">
   <div class="twelve wide column">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       <div class="post-preview">
         <h2><a href="{{post.url | prepend: site.baseurl}}">{{ post.title }}</a></h2>
         <p>{{ post.content | strip_html | truncate:200 }}</p>
@@ -12,6 +12,21 @@ layout: default
         </div>
       </div>
     {% endfor %}
+
+    {% if paginator.total_pages > 1 %}
+      <div class="pager row">
+        {% if paginator.previous_page %}
+          <div class="ui inverted blue button left floated">
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Blogs</a>
+          </div>
+        {% endif %}
+        {% if paginator.next_page %}
+          <div class="ui inverted blue button right floated">
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Blogs &rarr;</a>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
   </div>
   <div class="four wide right column">
     <h3><a href="/tags">TAGS OF BLOG</a></h3>
