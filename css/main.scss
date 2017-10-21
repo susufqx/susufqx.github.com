@@ -15,7 +15,7 @@
     height: 460px;
     background: no-repeat center center;
     h1{
-      font-size: 38px !important;
+      font-size: 38px;
     }
     .blog-part{
       .description{
@@ -41,14 +41,28 @@
 }
 @media only screen and (max-width: 700px) {
   .main-header{
-    .right.menu{
-      display: none !important;
-    }
-    .ui.menu.following-menu{
-      display: none !important;
-    }
-    .toc.item{
-      display: block !important;
+    .ui.inverted.vertical.masthead.center.aligned.segment{
+      height: 280px;
+      .ui.small.centered.circular.image{
+        width: 100px;
+      }
+      h1.ui.inverted{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 24px;
+      }
+      p.description{
+        margin-bottom: 0;
+      }
+      .right.menu{
+        display: none !important;
+      }
+      .ui.menu.following-menu{
+        display: none !important;
+      }
+      .toc.item{
+        display: block !important;
+      }
     }
   }
 }
@@ -105,6 +119,11 @@
     }
   }
   .four.wide.right.column{
+    h3{
+      a{
+        color: #000000;
+      }
+    }
     .ui.basic.label{
       background-color: white !important;
       color: #1E90FF !important;
