@@ -1,6 +1,7 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
 //blog text size
 .post-content{
   p{
@@ -21,7 +22,22 @@
 .ui.menu.following-menu{
   opacity: 0.7;
 }
-
+.toc.item{
+  display: none !important;
+}
+@media only screen and (max-width: 700px) {
+  .main-header{
+    .right.menu{
+      display: none !important;
+    }
+    .ui.menu.following-menu{
+      display: none !important;
+    }
+    .toc.item{
+      display: block !important;
+    }
+  }
+}
 /* end header part */
 
 /* footer part */
@@ -64,9 +80,14 @@
   }
 }
 
+@media only screen and(min-width:992px){
+  .doubling.stackable.two.column.ui.grid.container.post-part {
+    padding-left: 8em;
+  }
+}
+
 .doubling.stackable.two.column.ui.grid.container.post-part {
   padding-top: 4em;
-  padding-left: 8em;
   .twelve.wide.column{
     .post-preview{
       padding-bottom:4em !important;

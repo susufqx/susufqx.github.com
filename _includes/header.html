@@ -1,4 +1,4 @@
-<header class="main-header">
+<div class="main-header pusher">
   <div class="ui inverted vertical masthead center aligned segment" style="{%if page.header-img%}background: url({{page.header-img}}){%else%}background: url({{site.home-header-image}}){%endif%}">
     <!--Following menu-->
     <div class="ui large top fixed menu following-menu transition hidden">
@@ -31,7 +31,7 @@
       {%endif%}
     </div>
   </div>
-</header>
+</div>
 <script>
 $(document)
   .ready(function() {
@@ -45,5 +45,7 @@ $(document)
           $('.following-menu').transition('fade out');
         }
       });
-    });
+    $('.ui.sidebar')
+      .sidebar('attach events', '.toc.item');
+  });
 </script>
