@@ -1,6 +1,15 @@
 <div class="ui vertical right thin inverted sidebar menu">
-  <a class="item" href="/">HOME</a>
-  <a class="item" href="/about">ABOUT</a>
-  <a class="item" href="/tags">TAGS</a>
-  <a class="item" href="/photos">PHOTOS</a>
+  <a class="item sidebar-item" href="/">HOME</a>
+  <a class="item sidebar-item" href="/about">ABOUT</a>
+  <a class="item sidebar-item" href="/tags">TAGS</a>
+  <a class="item sidebar-item" href="/photos">PHOTOS</a>
 </div>
+<script>
+$(document)
+  .ready(function() {
+    $('.sidebar-item').click(function() {
+      $('.ui.sidebar')
+        .sidebar('hide');
+    });
+  });
+</script>
