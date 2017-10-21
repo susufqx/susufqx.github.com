@@ -10,6 +10,19 @@
 }
 
 /* header part */
+.main-header {
+  .ui.inverted.vertical.masthead.center.aligned.segment{
+    height: 460px;
+    h1{
+      font-size: 38px !important;
+    }
+    .blog-part{
+      .description{
+        font-size: 22px;
+      }
+    }
+  }
+}
 .ui.menu{
   a.item{
     color: inverted;
@@ -51,8 +64,11 @@
   color: white;
   text-align: center;
 }
-.ui.stackable.inverted.stackable.grid{
-  padding-left: 10em;
+
+@media only screen and(min-width:992px){
+  .ui.stackable.inverted.stackable.grid{
+    padding-left: 10em;
+  }
 }
 /* end footer part */
 
@@ -62,21 +78,6 @@
   .contact-font{
     font-size: 20px;
     color: white !important;
-  }
-}
-
-/* header style */
-.main-header {
-  .ui.inverted.vertical.masthead.center.aligned.segment{
-    height: 460px;
-    h1{
-      font-size: 38px !important;
-    }
-    .blog-part{
-      .description{
-        font-size: 22px;
-      }
-    }
   }
 }
 
