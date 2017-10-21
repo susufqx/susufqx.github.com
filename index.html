@@ -1,27 +1,25 @@
 ---
 layout: default
 ---
-<div class="ui middle aligned stackable grid container post-part">
-  <div class="ui two columns grid">
-    <div class="twelve wide column">
-      {% for post in site.posts %}
-        <div class="post-preview">
-          <h2><a href="{{post.url | prepend: site.baseurl}}">{{ post.title }}</a></h2>
-          <p>{{ post.content | strip_html | truncate:160 }}</p>
-          <div class="metadata">
-            <span class="date">{{post.date | date: "%B %-d, %Y"}}</span>
-          </div>
+<div class="doubling stackable two column ui grid container post-part">
+  <div class="twelve wide column">
+    {% for post in site.posts %}
+      <div class="post-preview">
+        <h2><a href="{{post.url | prepend: site.baseurl}}">{{ post.title }}</a></h2>
+        <p>{{ post.content | strip_html | truncate:160 }}</p>
+        <div class="metadata">
+          <span class="date">{{post.date | date: "%B %-d, %Y"}}</span>
         </div>
-      {% endfor %}
-    </div>
-    <div class="four wide right column">
-      <div class="ui blue labels">
-        {% for tag in site.tags %}
-          <a class="ui basic label" href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
-            {{ tag[0] }}
-          </a>
-        {% endfor %}
       </div>
+    {% endfor %}
+  </div>
+  <div class="four wide right column">
+    <div class="ui labels">
+      {% for tag in site.tags %}
+        <a class="ui basic label" href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+          {{ tag[0] }}
+        </a>
+      {% endfor %}
     </div>
   </div>
 </div>

@@ -1,10 +1,44 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-//text size
-p{
-  font-size: 18px;
+//blog text size
+.post-content{
+  p{
+    font-size: 18px;
+  }
 }
+
+/* header part */
+.ui.menu{
+  a.item{
+    color: inverted;
+    font-weight: bold;
+  }
+}
+.ui.menu.main-menu{
+  margin-top: -1em;
+}
+.ui.menu.following-menu{
+  opacity: 0.7;
+}
+
+/* end header part */
+
+/* footer part */
+.ui.inverted.link.list{
+  i.icon:hover{
+    color: #9BCD9B !important;
+    transform: scale(1.2);
+  }
+}
+.ui.divider{
+  color: white;
+  text-align: center;
+}
+.ui.stackable.inverted.stackable.grid{
+  padding-left: 10em;
+}
+/* end footer part */
 
 @charset "utf-8";
 /* footer style */
@@ -17,23 +51,28 @@ p{
 
 /* header style */
 .main-header {
-  h1{
-    font-size: 38px !important;
-  }
-  .blog-part{
-    .description{
-      font-size: 22px;
+  .ui.inverted.vertical.masthead.center.aligned.segment{
+    height: 460px;
+    h1{
+      font-size: 38px !important;
+    }
+    .blog-part{
+      .description{
+        font-size: 22px;
+      }
     }
   }
 }
 
-.ui.middle.aligned.stackable.grid.container.post-part {
+.doubling.stackable.two.column.ui.grid.container.post-part {
   padding-top: 4em;
-  .ui.two.columns.grid{
-    margin-left: 100px;
-    margin-right: 100px;
+  padding-left: 8em;
+  .twelve.wide.column{
     .post-preview{
-      padding-bottom:4em;
+      padding-bottom:4em !important;
+      p{
+        font-size: 14px !important;
+      }
       .metadata {
         span {
           color: gray;
@@ -41,12 +80,14 @@ p{
         }
       }
     }
-    .ui.label{
+  }
+  .four.wide.right.column{
+    .ui.basic.label{
       background-color: white !important;
       color: #1E90FF !important;
       border-color: #1E90FF !important;
     }
-    .ui.label:hover{
+    .ui.basic.label:hover{
       background-color: #1E90FF !important;
       color: white !important;
     }

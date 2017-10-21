@@ -1,10 +1,18 @@
-<header class="main-header" >
-  <div class="ui inverted vertical masthead center aligned segment" style="background: url('/assets/hero.jpg')">
-    <a href="/"><i class="huge white home icon"></i></a>
-    <div class="ui text container header" style="padding-top:100px;padding-bottom:100px">
+<header class="main-header">
+  <div class="ui inverted vertical masthead center aligned segment" style="{%if page.header-img%}background: url({{page.header-img}}){%else%}background: url({{site.home-header-image}}){%endif%}">
+    <!--Following menu-->
+    <div class="ui large top fixed menu following-menu transition hidden">
+      {% include menu.html %}
+    </div>
+    <!--Fixed menu-->
+    <div class="ui menu secondary large main-menu">
+      {% include menu.html %}
+    </div>
+    <!--Text part of header-->
+    <div class="ui text container header">
       <div class="header">
         <a href="{{ site.baseurl }}/">
-            <img class="ui small centered circular image" src="/assets/headshot.jpg" />
+            <img class="ui small centered circular image" src="{{site.myself-avatar}}" />
         </a>
       </div>
       {%if page.title%}
@@ -18,9 +26,24 @@
         </h1>
         <div class="main blog-part">
           <p class="description">{{ site.description }}</p>
-          <a href="about" class="ui inverted button">Read More</a>
+          <a href="about" class="ui inverted button">ABOUT</a>
         </div>
       {%endif%}
     </div>
   </div>
 </header>
+<script>
+$(document)
+  .ready(function() {
+    $('.main-menu')
+      .visibility({
+        once: false,
+        onBottomPassed: function() {
+          $('.following-menu').transition('fade in');
+        },
+        onBottomPassedReverse: function() {
+          $('.following-menu').transition('fade out');
+        }
+      });
+    });
+</script>

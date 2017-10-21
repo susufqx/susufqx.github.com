@@ -19,7 +19,9 @@ plugins: [jekyll-paginate]
 # Sidebar settings
 sidebar: true  #add sidebar
 sidebar-about-description: "Do myself, simple life with heart."
-sidebar-avatar: /images/myself.jpg
+#the images
+myself-avatar: /images/myself.jpg
+home-header-image: /images/chantilly-chateau.jpg
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
