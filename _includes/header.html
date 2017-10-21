@@ -17,9 +17,9 @@
       </div>
       {%if page.title%}
         <h1>{{page.title}}</h1>
-          <div class="metadata">
-            <span class="date"><h2>{{page.date | date: "%B %-d, %Y"}}</h2></span>
-          </div>
+        <div class="metadata">
+          <span class="date"><h2>{{page.date | date: "%B %-d, %Y"}}</h2></span>
+        </div>
       {%else%}
         <h1 class="ui inverted ">
           SusuFQX's Blog
@@ -46,6 +46,6 @@ $(document)
         }
       });
     $('.ui.sidebar')
-      .sidebar('attach events', '.toc.item');
+      .sidebar('attach events', '.toc.item', 'overlay');
   });
 </script>

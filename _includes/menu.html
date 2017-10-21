@@ -1,12 +1,21 @@
 <div class="ui container">
   <a href="/" class="item"><i class="big home black icon home-icon"></i></a>
   <div class="right menu">
-    <a class="item" href="/">HOME</a>
-    <a class="item" href="/about">ABOUT</a>
-    <a class="item" href="/tags">TAGS</a>
-    <a class="item" href="/photos">PHOTOS</a>
+    <a class="item sidebar-item" href="/">HOME</a>
+    <a class="item sidebar-item" href="/about">ABOUT</a>
+    <a class="item sidebar-item" href="/tags">TAGS</a>
+    <a class="item sidebar-item" href="/photos">PHOTOS</a>
   </div>
   <a class="toc item right floated">
     <i class="large sidebar icon"></i>
   </a>
 </div>
+<script>
+$(document)
+  .ready(function() {
+    $('.sidebar-item').click(function() {
+      $('.ui.sidebar')
+        .sidebar('hide');
+    });
+  });
+</script>
