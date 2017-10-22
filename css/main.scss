@@ -189,12 +189,13 @@
         color: #000000;
       }
     }
-    .ui.basic.label{
+    .ui.basic.button{
       background-color: white !important;
       color: #0E6EB8 !important;
       border-color: #0E6EB8 !important;
+      margin-bottom: 0.5em !important;
     }
-    .ui.basic.label:hover{
+    .ui.basic.button:hover{
       background-color: #0E6EB8 !important;
       color: white !important;
     }

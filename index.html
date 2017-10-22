@@ -28,7 +28,7 @@ layout: default
     <h3><a href="/tags">TAGS OF BLOG</a></h3>
     <div class="ui labels">
       {% for tag in site.tags %}
-        <a class="ui basic label" href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+        <a class="ui basic tiny primary button" href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
           {{ tag[0] }}
         </a>
       {% endfor %}
