@@ -16,14 +16,10 @@ layout: default
     {% if paginator.total_pages > 1 %}
       <div class="pager row">
         {% if paginator.previous_page %}
-          <div class="ui inverted blue button left floated">
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Blogs</a>
-          </div>
+          <a class="ui basic primary button left floated" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Blogs</a>
         {% endif %}
         {% if paginator.next_page %}
-          <div class="ui inverted blue button right floated">
-            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Blogs &rarr;</a>
-          </div>
+          <a class="ui basic primary button right floated" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Blogs &rarr;</a>
         {% endif %}
       </div>
     {% endif %}
