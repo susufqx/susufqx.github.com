@@ -1,13 +1,14 @@
 ---
 title: Tags
 layout: tag
+permalink: /tags/
 ---
 
 <div class="ui text container tags-container">
   <div class="ui text container">
     <div class="alltags">
 			{% for tag in site.tags %}
-				<a class="ui basic primary button" href="/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+				<a class="ui basic primary button" href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
       {% endfor %}
 		</div>
   </div>
