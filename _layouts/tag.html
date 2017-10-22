@@ -2,8 +2,10 @@
 <html>
   {% include head.html %}
   <body>
+    <!--Sidebar menu-->
+    {% include sidebar.html %}
     <div class="pusher">
-      <header class="main-header">
+      <div class="main-header">
         <div class="ui inverted vertical masthead center aligned segment" style="background-image: url('/assets/hero.jpg')">
           <!--Following menu-->
           <div class="ui large top fixed menu following-menu transition hidden">
@@ -22,7 +24,7 @@
             </h1>
           </div>
         </div>
-      </header>
+      </div>
       <div class="page-content">
         <div class="wrapper">
           {{ content }}
@@ -32,3 +34,13 @@
     </div>
   </body>
 </html>
+<script>
+$(document)
+  .ready(function() {
+    $('.toc.item').click(function() {
+      console.log("EEEJJJJJJHHHHHHSSSS");
+      $('.ui.sidebar')
+        .sidebar('toggle');
+    });
+  });
+</script>
