@@ -11,6 +11,9 @@ tags:
     - FullStack
     - TypeScript
 ---
+
+>这是一篇介绍Meteor和Angular4如何结合使用的教程，由于Meteor官方网站提供的是与Angular1结合的案列，所以本着自己研究和分享的态度，决定写一篇自己使用Meteor结合Angular4的文章，具体的实现在GitHub上，https://github.com/susufqx/meteor-angular4-boilerplate。
+
 ### 一、meteor框架
 
 Meteor是一个开源的使用Node.JS的支持全栈开发的框架。具体信息和文档可以搜索meteor官网进行查看。
@@ -117,3 +120,80 @@ $ meteor npm install autoprefixer, meteor-typings --save-dev
 至此，angular4在meteor中的环境基本搭建完成，下面我们需要简单地添加一些必要文件，因为angular4属于前端，因此所有文件均在```client```文件夹下。
 
 ### 四，构建基本angular4的文件
+由于只在client文件夹内构件文件，因此打开```client```文件夹，然后首先建立目录```imports/app```，此处```imports```一定不能省略，否则会报错！
+
+我们回到```client```文件夹下面，创立最基本的两个文件```index.html```和```index.ts```,
+其中```index.html```内容如下：
+```
+<head>
+  <meta charset="utf-8">
+  <title>Meteor-Angular4</title>
+  <base href="/">
+</head>
+<body>
+  <meteor-app></meteor-app>
+</body>
+```
+其中```index.ts```内容如下：
+```
+import 'zone.js';
+import 'reflect-metadata';
+
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { enableProdMode } from '@angular/core';
+import { Meteor } from 'meteor/meteor';
+import { AppModule } from './imports/app/app.module';
+
+Meteor.startup(() => {
+  enableProdMode();
+  platformBrowserDynamic().bootstrapModule(AppModule);
+});
+```
+然后我们进入```imports/app```文件夹内，创建```app.module.ts```，```app.component.ts```和```app.component.html```三个文件，这三个文件是Angular4 app的基本文件，名字就不需要改动了。
+
+其中```app.module.ts```内容如下：
+```
+// the modules
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
+// the components
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations : [
+    AppComponent
+  ],
+  imports : [
+    BrowserModule,
+  ],
+  bootstrap : [
+    AppComponent
+  ]
+})
+
+export class AppModule {}
+```
+其中```app.component.ts```内容如下：
+```
+import { Component } from "@angular/core";
+import template from './app.component.html';
+
+@Component({
+  selector: 'meteor-app',
+  template
+})
+
+export class AppComponent {
+  title = "Welcome to  Meteor Angular4";
+}
+```
+其中```app.component.html```内容如下：
+```
+<h1 class="text-center">{{title}}</h1>
+```
+文件内的具体内容可以根据需要改变，至此，Meteor搭配Angular4的基本配置全部完成，我们可以打开应用了。进入Meteor主文件夹，运行
+```
+$ meteor run
+```
+我们打开"127.0.0.1:3000",如果显示"Welcome to  Meteor Angular4"就表示我们的配置成功！
