@@ -33,18 +33,32 @@ body{
   }
 }
 .ui.menu{
-  a.item{
-    color: inverted;
-    font-weight: bold;
+  .ui.container{
+    .home-icon{
+      padding-top: 0.4em;
+      padding-left: 0.8em;
+    }
+    a{
+      color: inverted;
+      font-weight: bold;
+    }
+    .right.menu{
+      a{
+        padding-left: 2.5em;
+        padding-top: 1em;
+      }
+    }
   }
 }
 .ui.menu.main-menu{
   margin-top: -1em;
+  height: 54px;
 }
 .ui.menu.following-menu{
   opacity: 0.7;
+  height: 54px;
 }
-.toc.item{
+.toc.right.floated{
   display: none !important;
 }
 @media only screen and (min-width: 701px) {
@@ -74,12 +88,18 @@ body{
         margin-top: 0;
       }
       .right.menu{
-        display: none !important;
+        a{
+          display: none !important;
+        }
       }
       .ui.menu.following-menu{
         display: none !important;
       }
-      .toc.item{
+      .toc.right.floated{
+        cursor:pointer;
+        .large.sidebar.icon{
+          padding-bottom: 2em;
+        }
         display: block !important;
       }
     }
