@@ -36,16 +36,21 @@ body{
   .ui.container{
     .home-icon{
       padding-top: 0.4em;
-      padding-left: 0.8em;
     }
     a{
       color: inverted;
       font-weight: bold;
     }
     .right.menu{
+      padding-top: 1em;
       a{
-        padding-left: 2.5em;
-        padding-top: 1em;
+        width: 80% !important;
+        height:24px;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        i.large.sidebar.icon{
+          height: 24px !important;
+        }
       }
     }
   }
@@ -98,7 +103,7 @@ body{
       .toc.right.floated{
         cursor:pointer;
         .large.sidebar.icon{
-          padding-bottom: 2em;
+          padding-bottom: 1em;
         }
         display: block !important;
       }
