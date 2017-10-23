@@ -1,6 +1,6 @@
 /* to make lines scroll instead of wrap */
 /* from http://stackoverflow.com/a/23393920 */
-/
+
 .highlight pre code * {
   white-space: nowrap;    // this sets all children inside to nowrap
 }
@@ -13,6 +13,13 @@
   white-space: pre;       // forces <code> to respect <pre> formatting
 }
 
+.highlighter-rouge{
+  color:#C7254E !important;
+  padding: 2px 4px;
+  font-size: 90%;
+  background-color: #F9F2F4;
+  border-radius: 4px;
+}
 
 /*
  * GitHub style for Pygments syntax highlighter, for use with Jekyll
@@ -89,5 +96,5 @@ blockquote {
   font-size: .95em;
   margin: 20px 0 20px;
   border-left: 5px solid #eee;
-  padding: 10px 20px;  
+  padding: 10px 20px;
 }
