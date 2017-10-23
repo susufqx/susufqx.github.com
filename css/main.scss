@@ -173,7 +173,7 @@ body{
     .post-preview{
       padding-bottom:4em !important;
       p{
-        font-size: 14px !important;
+        font-size: 16px !important;
       }
       .metadata {
         span {
@@ -211,16 +211,21 @@ body{
 }
 
 /* Post page style */
-.post-page{
-  @media only screen and (min-width: 768px){
-    .post-content{
-      padding-left: 10em;
-      padding-right: 10em;
-      padding-top: 4em;
-      padding-bottom: 8em;
-    }
+
+@media only screen and (min-width: 768px){
+  .ui.container.post-page{
+    width: 723px;
+    padding-top: 2em;
+    padding-bottom: 6em;
   }
 }
+@media only screen and (max-width: 767px){
+  .ui.container.post-page{
+    padding-top: 2em;
+    padding-bottom: 4em;
+  }
+}
+
 
 
 pre {
