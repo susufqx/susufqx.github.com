@@ -1,12 +1,14 @@
 <div class="main-header">
   <div class="ui inverted vertical masthead center aligned segment" style="{%if page.header-img%}background-image: url({{page.header-img}}){%else%}background-image: url({{site.home-header-image}}){%endif%}">
-    <!--Following menu-->
-    <div class="ui large top fixed menu following-menu transition hidden">
-      {% include menu.html %}
-    </div>
-    <!--Fixed menu-->
-    <div class="ui menu secondary large main-menu">
-      {% include menu.html %}
+    <div class="ui container">
+      <!--Following menu-->
+      <div class="ui large top fixed menu following-menu transition hidden">
+        {% include menu.html %}
+      </div>
+      <!--Fixed menu-->
+      <div class="ui menu secondary large main-menu">
+        {% include menu.html %}
+      </div>
     </div>
     <!--Text part of header-->
     <div class="ui text container header">
