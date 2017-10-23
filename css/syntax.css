@@ -13,7 +13,7 @@
   white-space: pre;       // forces <code> to respect <pre> formatting
 }
 
-.highlighter-rouge{
+code.highlighter-rouge{
   color:#C7254E !important;
   padding: 2px 4px;
   font-size: 90%;
