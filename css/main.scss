@@ -213,18 +213,10 @@ body{
 /* Post page style */
 .post-page{
   @media only screen and (min-width: 768px){
-    .ui.container{
-      padding:  6em 8em;
+    .post-content{
+      padding-left: 12em;
+      padding-right: 12em;
     }
-  }
-  @media only screen and (max-width: 767px){
-    .ui.container{
-      padding:  1em 1em;
-    }
-  }
-  .ui.container{
-    //background-color: #E5E5E5;
-    text-align: left;
   }
 }
 
