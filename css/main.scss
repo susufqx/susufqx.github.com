@@ -12,7 +12,7 @@ body{
 //blog text size
 .post-content{
   p{
-    font-size: 18px;
+    font-size: 16px;
     word-break:break-word !important;
   }
 }
@@ -214,8 +214,10 @@ body{
 .post-page{
   @media only screen and (min-width: 768px){
     .post-content{
-      padding-left: 12em;
-      padding-right: 12em;
+      padding-left: 10em;
+      padding-right: 10em;
+      padding-top: 4em;
+      padding-bottom: 8em;
     }
   }
 }
