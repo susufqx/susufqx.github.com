@@ -649,7 +649,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover, a:focus, a:active {
   color: #1e70bf;
   text-decoration: none;
 }
