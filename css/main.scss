@@ -113,10 +113,34 @@ body{
 /* end header part */
 
 /* footer part */
+.icons{
+  list-style:none;
+  padding:0;
+  margin:0;
+  li{
+    list-style:none;
+    padding:0;
+    margin:0;
+    float:left;
+    a{
+      width:150px; /* 设置宽度 */
+      height:30px; /* 设置高度 */
+      color:#fff; /* 设置文字颜色 */
+      text-decoration:none; /* 去掉下划线 */
+      i.inverted.circular.grey.icon:hover{
+        background-color: #0E6EB8 !important;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.ui.inverted.header{
+  font-size: 18px;
+
+}
 .ui.inverted.link.list{
-  i.icon:hover{
-    color: #9BCD9B !important;
-    transform: scale(1.2);
+  a.item{
+    color: white !important;
   }
 }
 .ui.divider{
@@ -155,8 +179,9 @@ body{
     margin-left: 2em;
     font-size: 20px;
     color: #000000;
+    margin-top: 0;
   }
-  h3.post-subtitle{
+  b.post-subtitle{
     margin-left: 4em;
     margin-top: 0;
     font-size: 14px;
@@ -179,12 +204,6 @@ body{
 
 @charset "utf-8";
 /* footer style */
-.footer-part{
-  .contact-font{
-    font-size: 20px;
-    color: white !important;
-  }
-}
 
 @media only screen and(min-width:992px){
   .doubling.stackable.two.column.ui.grid.container.post-part {

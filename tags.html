@@ -21,16 +21,14 @@ permalink: /tags/
         </h2>
       </a>
       {% for post in tag[1] %}
-        <a class="tag-title" href="{{ post.url | prepend: site.baseurl }}">
-          <h2 class="post-title">
-            {{ post.title }}
-          </h2>
-          {% if post.subtitle %}
-            <h3 class="post-subtitle">
-              {{ post.subtitle }}
-            </h3>
-          {% endif %}
-        </a>
+        <h2 class="post-title">
+          <a class="header tag-title" href="{{ post.url | prepend: site.baseurl }}">
+            {{ post.title }}<br/>
+            {% if post.subtitle %}
+              <b class="post-subtitle">{{ post.subtitle }}</b>
+            {% endif %}
+          </a>
+        </h2>
         <div class="ui divider"></div>
       {% endfor %}
     {% endfor %}
