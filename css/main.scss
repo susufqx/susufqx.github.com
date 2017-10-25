@@ -123,10 +123,9 @@ body{
     margin:0;
     float:left;
     a{
-      width:150px; /* 设置宽度 */
-      height:30px; /* 设置高度 */
-      color:#fff; /* 设置文字颜色 */
-      text-decoration:none; /* 去掉下划线 */
+      width:150px;
+      height:30px;
+      text-decoration:none;
       i.inverted.circular.grey.icon:hover{
         background-color: #0E6EB8 !important;
         transform: scale(1.1);
