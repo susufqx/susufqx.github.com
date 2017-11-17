@@ -268,15 +268,17 @@ Si je clique le bouton « Rénovation & extension », il doit afficher le menu
 * Pose et remplacement d'équipement de porte
 
 En fait, si cliquez le bouton il y a deux occasions. Si la catégorie a fils il peut afficher le menu du fils sinon il peut accès à la page de l’estimation. C’est facile de réaliser pour moi mais c’est utilisée sur web page donc je dois faire ça par les fonctions de Blaze Template. Si la catégorie a le fils et il a besoin d’afficher le menu je peux utiliser l’circulation comme ça :
+
 ```
 {{#each category}}
-…
+...
 {{/each}}
 ou
 {(#each item in category)}
-…
+...
 {{/each}}
 ```
+
 Le paramètre catégorie est défini par le Template helpers dans le ficher JavaScript. Mais l’circulation est dans le fichier HTML. Si on a défini un Template, on peut le donner un nom. Les paramètres de Template sont définis dans le fichier JavaScript et ils peuvent être lus et utilisés dans le Template le même nom dans le fichier HTML. En fait, ajoutez la logique dans le HTML fichier est bien et facile de réaliser le View de MVC.
 
 ![avatar](/images/blogs/2016-10-05-02.png)
