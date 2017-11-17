@@ -1,8 +1,8 @@
 ---
-layout:post
-title:"初学Objective-C"
-date:2015-05-22 01:11
-categories:blog
+layout: post
+title: "初学Objective-C"
+date: 2015-05-22 01:11
+categories: blog
 tags:
 -Objective-C
 -Foundation
