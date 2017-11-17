@@ -30,3 +30,6 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 #paginate
 paginate: 10
 paginate_path: "page:num"
+
+rap_1: "{{#each category}}\n...\n{{/each}}"
+rap_2: "{{#each item in category}}\n...\n{{/each}}"
