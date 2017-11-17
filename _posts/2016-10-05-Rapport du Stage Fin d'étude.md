@@ -50,7 +50,7 @@ En stage, ma mission est le développement du web. C’est un développement ful
 
 En fait, Meteor est un framework open-source de développement web en JavaScript basé sur Node.js. Le projet vise à créer un framework de « nouvelle génération » induisant un changement de paradigme notamment sur la manière de considérer les architectures client-serveur. On veut donner un diagramme pour expliquer le travail de Meteor :
 
-![avatar](/images/blogs/2016-10-05-01.png)
+![avatar](/images/blogs/2016-10-05-01.jpeg)
 
 L’application du web a deux partis : front-end et back-end ou on peut utiliser client et serveur. Client est pour les utilisateurs et serveur est l’ordinateur qui donner le client les données et contrôler les logiques de l’application.
 
