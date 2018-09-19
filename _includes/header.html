@@ -1,38 +1,36 @@
-<div class="main-header">
-  <div class="ui inverted vertical masthead center aligned segment" style="{%if page.header-img%}background-image: url({{page.header-img}}){%else%}background-image: url({{site.home-header-image}}){%endif%}">
-    <div class="ui container">
-      <!--Following menu-->
-      <div class="ui large top fixed menu following-menu transition hidden">
-        {% include menu.html %}
-      </div>
-      <!--Fixed menu-->
-      <div class="ui menu secondary large main-menu">
-        {% include menu.html %}
-      </div>
+<header class="ui inverted vertical masthead center aligned segment" style="{%if page.header-img%}background-image: url({{page.header-img}}){%else%}background-image: url({{site.home-header-image}}){%endif%};background-size: cover;">
+  <div class="ui container">
+    <!--Following menu-->
+    <div class="ui large top fixed menu following-menu transition hidden">
+      {% include menu.html %}
     </div>
-    <!--Text part of header-->
-    <div class="ui text container header">
-        <a href="{{ site.baseurl }}/" class="ui small centered circular image">
-          <img src="{{site.myself-avatar}}" />
-        </a>
-
-      {%if page.title%}
-        <h1>{{page.title}}</h1>
-        <div class="metadata">
-          <span class="date"><h2>{{page.date | date: "%B %-d, %Y"}}</h2></span>
-        </div>
-      {%else%}
-        <h1 class="ui inverted ">
-          SusuFQX Blog
-        </h1>
-        <div class="main blog-part">
-          <p class="description">{{ site.description }}</p>
-          <a href="about" class="ui inverted button">ABOUT</a>
-        </div>
-      {%endif%}
+    <!--Fixed menu-->
+    <div class="ui menu secondary large main-menu">
+      {% include menu.html %}
     </div>
   </div>
-</div>
+  <!--Text part of header-->
+  <div class="ui text container header">
+      <a href="{{ site.baseurl }}/" class="ui small centered circular image">
+        <img src="{{site.myself-avatar}}" />
+      </a>
+
+    {%if page.title%}
+      <h1>{{page.title}}</h1>
+      <div class="metadata">
+        <span class="date"><h2>{{page.date | date: "%B %-d, %Y"}}</h2></span>
+      </div>
+    {%else%}
+      <h1 class="ui inverted ">
+        SusuFQX Blog
+      </h1>
+      <div class="main blog-part">
+        <p class="description">{{ site.description }}</p>
+        <a href="about" class="ui inverted button">ABOUT</a>
+      </div>
+    {%endif%}
+  </div>
+</header>
 <script>
 $(document)
   .ready(function() {
