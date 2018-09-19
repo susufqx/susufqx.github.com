@@ -18,17 +18,15 @@ body{
 }
 
 /* header part */
-.main-header {
-  .ui.inverted.vertical.masthead.center.aligned.segment{
-    height: 460px;
-    background: no-repeat center center;
-    h1{
-      font-size: 38px;
-    }
-    .blog-part{
-      .description{
-        font-size: 22px;
-      }
+.ui.inverted.vertical.masthead.center.aligned.segment{
+  height: 460px;
+  background: no-repeat center center;
+  h1{
+    font-size: 38px;
+  }
+  .blog-part{
+    .description{
+      font-size: 22px;
     }
   }
 }
@@ -75,38 +73,36 @@ body{
   }
 }
 @media only screen and (max-width: 700px) {
-  .main-header{
-    .ui.inverted.vertical.masthead.center.aligned.segment{
-      height: 280px;
-      .ui.small.centered.circular.image{
-        width: 100px;
-      }
-      h1{
-        margin-top: 0;
-        margin-bottom: 0;
-        font-size: 24px;
-      }
-      p.description{
-        margin-bottom: 0;
-      }
-      .ui.text.container.header{
-        margin-top: 0;
-      }
-      .right.menu{
-        a{
-          display: none !important;
-        }
-      }
-      .ui.menu.following-menu{
+  .ui.inverted.vertical.masthead.center.aligned.segment{
+    height: 280px;
+    .ui.small.centered.circular.image{
+      width: 100px;
+    }
+    h1{
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 24px;
+    }
+    p.description{
+      margin-bottom: 0;
+    }
+    .ui.text.container.header{
+      margin-top: 0;
+    }
+    .right.menu{
+      a{
         display: none !important;
       }
-      .toc.right.floated{
-        cursor:pointer;
-        .large.sidebar.icon{
-          padding-bottom: 1em;
-        }
-        display: block !important;
+    }
+    .ui.menu.following-menu{
+      display: none !important;
+    }
+    .toc.right.floated{
+      cursor:pointer;
+      .large.sidebar.icon{
+        padding-bottom: 1em;
       }
+      display: block !important;
     }
   }
 }
@@ -274,8 +270,6 @@ body{
   }
 }
 
-
-
 pre {
   overflow: auto;
   display: block;
@@ -300,4 +294,12 @@ pre code {
   background-color: transparent;
   border-radius: 0;
   word-wrap: normal;
+}
+
+.ui.centered.circular {
+  padding-top: 4em;
+}
+
+.massive.tags.icon {
+
 }
