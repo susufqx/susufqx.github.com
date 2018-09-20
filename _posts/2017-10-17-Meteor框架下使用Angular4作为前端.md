@@ -39,14 +39,14 @@ angular4是目前angular最新的版本，对于移动app和web都有很良好�
 我是因为学习的需要，个人在之前的实习时曾经使用meteor作为开发框架，确实很好用，前后端一并开发，语言统一，有些代码可以共同使用，省去了不少事。可是meteor的默认前端是使用的balze.js，一种更为冷门的前端框架（姑且这么叫做框架）。blaze很简单，不复杂，但是写起JavaScript代码来，却并不简便，甚至很为繁琐，有些编程思想很为过时，对于前端要求高的应用来说，我觉得简直是一种灾难。对于数据的调用，是非常不方便。所以为了使用meteor这么好的全栈框架，也为了使用angular4这么好的前端，我决定两者搭配混合使用。
 
 在meteor导入angular4之前，我们必须删除blaze，否则两个前端同时存在，会出现异常。打开终端，执行：
-```
+```shell
 $ cd meteor-angular4-app
 $ meteor remove blaze-html-templates
 ```
 这样我们就删除了blaze模板。
 
 由于angular4使用的是TypeScript，是严格的ES2015及其之后的标准，所以对于某些import和语法结构，需要```typings```来支持，否则某些编辑器会出现报错现象。打开终端,
-```
+```shell
 $ npm install typings
 $ cd meteor-angular4-app
 $ typings install registry:env/meteor --global
@@ -54,7 +54,7 @@ $ typings install registry:env/meteor --global
 这样，typings的指令和app所需要的文件就安装好了。
 
 然后我们需要对该app配置tsconfig.json文件，打开终端,进入meteor文件夹，创立新文件命名为```tsconfig.json```,里面放入如下内容：
-```
+```shell
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
@@ -99,7 +99,7 @@ $ typings install registry:env/meteor --global
 当然里面内容可以根据实际情况进行修改。
 
 接下来我们导入meteor对于angular2的编译包，因为目前尚未找到angular4的包，可是2与4的编译基本类似，所有再次我们使用angular2的。执行，
-```
+```shell
 $ meteor add angular2-compilers
 $ meteor add dynamic-import
 ```
@@ -108,7 +108,7 @@ $ meteor add dynamic-import
 由于angular4使用的是npm包管理，于是我们只要添加对应的包即可安装angular4。注意，在meteor的应用下，所有的npm命令前面推荐添加上meteor，也就是```meteor npm ...```。
 
 我们进入app，然后输入，
-```
+```shell
 $ meteor npm install rxjs zone.js reflect-metadata bcrypt --save
 $ meteor npm install @angular/{animations,common,compiler,core,forms,http,platform-browser,platform-browser-dynamic,platform-server,router} --save
 $ meteor npm install @angular/{cli, complier-cli, language-service} --save-dev
@@ -124,7 +124,7 @@ $ meteor npm install autoprefixer, meteor-typings --save-dev
 
 我们回到```client```文件夹下面，创立最基本的两个文件```index.html```和```index.ts```,
 其中```index.html```内容如下：
-```
+```shell
 <head>
   <meta charset="utf-8">
   <title>Meteor-Angular4</title>
@@ -135,7 +135,8 @@ $ meteor npm install autoprefixer, meteor-typings --save-dev
 </body>
 ```
 其中```index.ts```内容如下：
-```
+
+```shell
 import 'zone.js';
 import 'reflect-metadata';
 
@@ -149,10 +150,11 @@ Meteor.startup(() => {
   platformBrowserDynamic().bootstrapModule(AppModule);
 });
 ```
+
 然后我们进入```imports/app```文件夹内，创建```app.module.ts```，```app.component.ts```和```app.component.html```三个文件，这三个文件是Angular4 app的基本文件，名字就不需要改动了。
 
 其中```app.module.ts```内容如下：
-```
+```shell
 // the modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -175,7 +177,7 @@ import { AppComponent } from './app.component';
 export class AppModule {}
 ```
 其中```app.component.ts```内容如下：
-```
+```shell
 import { Component } from "@angular/core";
 import template from './app.component.html';
 
@@ -189,11 +191,11 @@ export class AppComponent {
 }
 ```
 其中```app.component.html```内容如下：
-```
+```shell
 <h1 class="text-center">{{title}}</h1>
 ```
 文件内的具体内容可以根据需要改变，至此，Meteor搭配Angular4的基本配置全部完成，我们可以打开应用了。进入Meteor主文件夹，运行
-```
+```shell
 $ meteor run
 ```
 我们打开"127.0.0.1:3000",如果显示"Welcome to  Meteor Angular4"就表示我们的配置成功！

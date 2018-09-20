@@ -16,7 +16,7 @@ Objective-C代码不区分大小写，与C++类似，都是面向对象的语言
 
 #### 1.类的定义
 在头文件里，这里建立头文件```Cattle.h```。
-```
+```shell
 #import<Foundation/Foundation.h>//我不知道里面包含什么，但是必须引用
 
 @interfaceCattle:NSObject//类定义的开始，类似于C++或者Java中的class，冒号后面是继承NSObject，这里有很多接口和函数，这样可以利于我们的使用，NSObject没有父类
@@ -29,7 +29,7 @@ Objective-C代码不区分大小写，与C++类似，都是面向对象的语言
 ```
 #### 2.类的函数方法
 由于我们建立了头文件```Cattle.h```，所以我们还得建立一个Cattle.m文件来定义类中的函数。
-```
+```shell
 #import"Cattle.h"//此处我们只需要引用刚才建立的头文件即可
 
 @implementationCattle//这里表示具体定义的开始，其实类似于C++中的类名::，只是不需要每个函数写一次
@@ -45,7 +45,7 @@ Objective-C代码不区分大小写，与C++类似，都是面向对象的语言
 ```
 #### 3.主函数
 对应的我们建立一个主函数的文件```main.m```。
-```
+```shell
 #import<Foundation/Foundation.h>
 #import"Cattle.h"
 
