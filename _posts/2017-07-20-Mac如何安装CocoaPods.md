@@ -3,6 +3,7 @@ layout: post
 title:  "Mac如何安装CocoaPods"
 date:   2016-07-20 23:04
 categories: blog
+header-img: /images/paris.jpg
 tags:
     - iOS
     - CocoaPods

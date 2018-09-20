@@ -3,6 +3,7 @@ layout: post
 title: "Rapport du Stage Fin d'étude"
 date: 2016-10-05 00:14
 categories: blog
+header-img: /images/paris.jpg
 tags:
 - Meteor
 - JavaScript
