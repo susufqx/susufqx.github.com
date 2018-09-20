@@ -6,7 +6,14 @@
 }
 
 .highlight pre {
-  overflow-x: auto;       // this sets the scrolling in x
+  overflow-x: none;       // this sets the scrolling in x
+}
+
+::-webkit-scrollbar {
+  height: 2px;
+  width: 2px;
+  background: rgba(0, 0, 0, 0.0);
+  display: inline;
 }
 
 .highlight pre code {
