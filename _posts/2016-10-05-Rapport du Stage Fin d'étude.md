@@ -62,21 +62,21 @@ On n’a pas besoin de connaître comment Meteor fonctionner entre les deux part
 Node est le langage de back-end mais le front-end on peut utiliser quoi ? Bien sûr, on a trois options sur le document officiel. Les trois sont Blaze.JS, Angular.JS et React.JS. Je pense que Angular.JS et React.JS sont très connu pour les ingénieurs du Web. Si on choisit Angular.JS ou React.JS, c’est facile de modifier le back-end par Meteor ou c’est facile d’utiliser autres langages du back-end. Mais dans notre projet, on a choisi Blaze qui est plus simple et seulement peut être utilisé dans Meteor. Blaze n’est pas complexe mais il est très puissant qui peut on aide d’écrire le front-end très bien. Il a le mécanisme de Template qui peut ajouter les datas dans le fichier HTML. Il a beaucoup de méthodes pour nous de faire les datas afficher dans le client mieux.
 
 C’est facile pour nous de faire le développement du web. Après installer Meteor sur nos ordinateurs, on peut créer le nouveau projet sur le Terminal par :
-```
+```shell
 $ meteor create MyProject
 ```
 Ça a créé le projet qui s’appelle MyProject, le carton MyProject contient les fichiers de Meteor. Il y a beaucoup de types de cartons dans le carton MyProject. Client et Server sont obligatoire. Tous les code dans le Client peuvent seulement marcher dans le client et tous les code dans le Server peuvent seulement marcher dans le serveur. Mais il y autre cartons et les fichiers dans ces cartons peuvent marcher dans client ou serveur. Donc on peut partager beaucoup de code qui nous aide écrire let utiliser le code mieux. Si le client et le serveur veulent utiliser la fonction la même, dans Meteor, on a besoin d’écrire une fois.
 
 Ensuite, si on va exécuter la programmation Meteor, on peut entrer le carton d’abord et faire ça :
-```
+```shell
 $ cd MyProject
 ```
 Si on a utilisé les packages de Node, on a besoin de saisir le code, si non pas saisir :
-```
+```shell
 $ Meteor npm install
 ```
 Après on peut saisir :
-```
+```shell
 $ Meteor
 ```
 Le meteor peut connecter à MongoDB, ajouter les packages et autre choses. Si tous les choses sont bien, on peut saisir « http://localhost:3000 » sur le browser et voir le web.  
@@ -87,7 +87,7 @@ Le meteor peut connecter à MongoDB, ajouter les packages et autre choses. Si to
 Semanti-ui est un framework de UI qui peut faire le web afficher plus jolie. Peut-être ce n’est pas les travailler pour nous développeurs mais en stage c’est obligatoire pour nous. Comme le nom de cette framework, tous les CSSs sont sémantique. Par exemple, si on écrit « class= “ui two buttons” », il peut afficher deux boutons dans le même rang. Si on écrit « class= “ui red button” », il peut afficher un bouton rouge. C’est un framework sémantique donc si on peut connaître l’anglais on peut utiliser semantic-ui.
 
 Semantic-ui n’est pas la partie de Meteor, donc on a besoin d’ajouter semantic-ui dans notre projet. Ici, je vous présente le management de package de Meteor. Si on va installer semantic-ui, on peut trouver les packages sur le website « Atmosphere » et il peut nous donner beaucoup de packages de semantic-ui pour Meteor. Bien sûr, s’il y a le package officiel, choisissez là. Le code de terminal est comme ça :
-```
+```shell
 $ Meteor add semantic :ui
 ```
 Si on va supprimer le package, seulement modifier « add » à « remove ». Si le package ajoute on peut utiliser les fonctions et les variables directement.
@@ -106,13 +106,13 @@ Il y a aussi beaucoup de bibliothèques de JavaScript.
 	-jQuery
 	jQuery est une bibliothèque JavaScript libre et multiplateforme créée pour faciliter l'écriture de scripts côté client dans le code HTML des pages web3.
 La bibliothèque contient notamment les fonctionnalités suivantes :
-	* Parcours et modification du DOM (y compris le support des sélecteurs CSS 1 	à 3 et un support basique de XPath) ;
-	* Événements ;
-	* Effets visuels et animations ;
-	* Manipulations des feuilles de style en cascade (ajout/suppression des 	classes, d'attributs…) ;
-	* Ajax ;
-	* Plugins ;
-	* Utilitaires (version du navigateur web…).
+	*  Parcours et modification du DOM (y compris le support des sélecteurs CSS 1 	à 3 et un support basique de XPath) ;
+	*  Événements ;
+	*  Effets visuels et animations ;
+	*  Manipulations des feuilles de style en cascade (ajout/suppression des 	classes, d'attributs…) ;
+	*  Ajax ;
+	*  Plugins ;
+	*  Utilitaires (version du navigateur web…).
 	C’est très important parce que on a besoin de jQuery pour contrôler le DOM de HTML et si on utilise semantic-ui, jQuery est nécessaire.
 
 
@@ -123,7 +123,7 @@ C’est un web application sur l’ordinateur, pad et portable par le technique 
 <h5 id="3.1">1.CREER LES PAGES ET REALISER LES CONTROLER</h5>
 
 Pour moi, la première mission est créer la page de travaux. C’est une page de liste des travaux. Chaque travail a son fils des travaux concrets. Par exemple, il y un tableau de JSON :
-```
+```shell
 Travaux =[
         // data 1
         {
@@ -253,28 +253,28 @@ Travaux =[
 ```  
 C’est très long mais claire que j’ai besoin de créer le menu de ce tableau. D’abord, le buttons du menu sont :
 
-* Rénovation & extension
-* Aménagement et décoration
-* Numérique
-* Jardin et extérieur
-* Manutention & évacuation
-* Urgence
+*  Rénovation & extension
+*  Aménagement et décoration
+*  Numérique
+*  Jardin et extérieur
+*  Manutention & évacuation
+*  Urgence
 
 Si je clique le bouton « Rénovation & extension », il doit afficher le menu du fils qui sont les boutons 
 
-* Montage meuble
-* Pose et fixation de tableau, patère, porte manteau
-* Pose et fixation miroir
-* Pose de tringle à rideau
-* Pose et remplacement d'équipement de porte
+*  Montage meuble
+*  Pose et fixation de tableau, patère, porte manteau
+*  Pose et fixation miroir
+*  Pose de tringle à rideau
+*  Pose et remplacement d'équipement de porte
 
 En fait, si cliquez le bouton il y a deux occasions. Si la catégorie a fils il peut afficher le menu du fils sinon il peut accès à la page de l’estimation. C’est facile de réaliser pour moi mais c’est utilisée sur web page donc je dois faire ça par les fonctions de Blaze Template. Si la catégorie a le fils et il a besoin d’afficher le menu je peux utiliser l’circulation comme ça :
 
-```
+```shell
 {{site.rap_1}}
 ```
 ou
-```
+```shell
 {{site.rap_2}}
 ```
 
@@ -310,8 +310,8 @@ Mais il seulement fonctionner sur les adresses du web de https. A ce moment, chr
 
 Le résultat est comme ça, mais par default, tous les informations afficher dans l’input de l’adresse. Mais on peut utiliser le fonction getPlace() pour obtenir tous les informations comme le département, le pays etc.
 Le code de réaliser l’auto complétion est
-```
-	let input        = document.getElementById('street');
+```shell
+  let input = document.getElementById('street');
   let autocomplete = new google.maps.places.Autocomplete(input);
 ```
 Est si l’adresse est changée, on peut fournir les inputs de rue, code postale etc. Donc on a besoin de addListener pour faire ça et après on peut utiliser getPlace() pour obtenir l’information que on a besoin de.
@@ -353,6 +353,7 @@ C’est la liste de connaissances qui j’ai appris pendant le stage :
 - Grid Files
 - Transmission d’email
 - Google Maps API par JavaScript
+
 Aussi, j’ai appris beaucoup de choses technique et comment nettoyer le code. Je vais continuer mon stage et apprendre plus.
 
 <h4 id="5">V. CONCLUSION</h4>
