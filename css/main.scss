@@ -111,43 +111,48 @@ body{
 /* end header part */
 
 /* footer part */
-.icons{
-  list-style:none;
-  padding:0;
-  margin:0;
-  li{
+.footer {
+  .icons{
     list-style:none;
     padding:0;
     margin:0;
-    float:left;
-    a{
-      width:150px;
-      height:30px;
-      text-decoration:none;
-      i.inverted.circular.grey.icon:hover{
-        background-color: #0E6EB8 !important;
-        transform: scale(1.1);
+    li{
+      list-style:none;
+      padding:0;
+      margin:0;
+      float:left;
+      a{
+        width:150px;
+        height:30px;
+        text-decoration:none;
+        i.inverted.circular.grey.icon:hover{
+          background-color: #0E6EB8 !important;
+          transform: scale(1.1);
+        }
       }
     }
   }
-}
-.ui.inverted.header{
-  font-size: 18px;
+  .ui.inverted.header{
+    font-size: 18px;
 
-}
-.ui.inverted.link.list{
-  a.item{
-    color: white !important;
   }
-}
-.ui.divider{
-  color: white;
-  text-align: center;
-}
+  .ui.inverted.link.list{
+    a.item{
+      color: white !important;
+    }
+    a.item:hover{
+      color: #0E6EB8 !important
+    }
+  }
+  .ui.divider{
+    color: white;
+    text-align: center;
+  }
 
-@media only screen and(min-width:992px){
-  .ui.stackable.inverted.stackable.grid{
-    padding-left: 10em;
+  @media only screen and(min-width:992px){
+    .ui.inverted.stackable.grid{
+      padding-left: 10em;
+    }
   }
 }
 /* end footer part */
