@@ -1,0 +1,37 @@
+---
+title: Golang
+layout: default
+permalink: /golang/
+---
+
+<div class="ui text container tags-container">
+  <div class="ui text container">
+    <div class="alltags">
+			<!-- {% for tag in site.tags %}
+				<a class="ui basic primary button" href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+      {% endfor %} -->
+      <a class="ui basic primary button" href="#Golang" title="Golang">Golang</a>
+		</div>
+  </div>
+  <div id='tag_cloud' class="tags">
+    {% for tag in site.tags %}
+      <a class="tag-label" id="{{ tag[0] }}">
+        <h2 class="tag-type">
+          <i class="large tag blue icon"></i>
+          {{ tag[0] }}
+        </h2>
+      </a>
+      {% for post in tag[1] %}
+        <h2 class="post-title">
+          <a class="header tag-title" href="{{ post.url | prepend: site.baseurl }}">
+            {{ post.title }}<br/>
+            {% if post.subtitle %}
+              <b class="post-subtitle">{{ post.subtitle }}</b>
+            {% endif %}
+          </a>
+        </h2>
+        <div class="ui divider"></div>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>

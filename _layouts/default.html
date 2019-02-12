@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
-  <body ontouchstart=''>
-    <!--Sidebar menu-->
-    {% include sidebar.html %}
-      <div class="pusher">
-        {% include header.html %}
-        <div class="page-content">
-          <div class="wrapper">
-            {{ content }}
-          </div>
-        </div>
-        {% include footer.html %}
+{% include head.html %}
+
+<body id="example" class="site" ontouchstart="">
+  <!--Sidebar menu-->
+  {% include sidebar.html %}
+  {% include header.html %}
+  <div class="pusher">
+    <div class="full height">
+      <div class="article">
+        {{ content }}
       </div>
-  </body>
+    </div>
+  </div>
+  {% include footer.html %}
+  <script>
+    window.less = {
+      async: true,
+      environment: 'production',
+      fileAsync: false,
+      onReady: false,
+      useFileCache: true
+    };
+  </script>
+
+  <script src="/javascript/library/less.min.js"></script>
+
+</body>
+
 </html>
 <script>
-$(document)
-  .ready(function() {
-    $('*').on('touchstart', function () {
+  $(document)
+    .ready(function() {
+      $('*').on('touchstart', function() {
         $(this).trigger('hover');
-    }).on('touchend', function () {
+      }).on('touchend', function() {
         $(this).trigger('hover');
+      });
     });
-  });
 </script>

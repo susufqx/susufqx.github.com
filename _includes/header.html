@@ -12,46 +12,48 @@
   <!--Text part of header-->
   <div class="ui text container header">
     {%if page.title%}
-      <div class="ui centered circular">
-        {%if page.title == 'Tags'%}
-          <i class="massive tags icon"></i>
-        {%elsif page.title == 'About'%}
-          <i class="massive book icon"></i>
-        {%endif%}
-      </div>
-      <h1>{{page.title}}</h1>
-      <div class="metadata">
-        <span class="date"><h2>{{page.date | date: "%B %-d, %Y"}}</h2></span>
-      </div>
+    <div class="ui centered circular">
+      {%if page.title == 'Tags'%}
+      <i class="massive tags icon"></i>
+      {%elsif page.title == 'About'%}
+      <i class="massive book icon"></i>
+      {%endif%}
+    </div>
+    <h1>{{page.title}}</h1>
+    <div class="metadata">
+      <span class="date">
+        <h2>{{page.date | date: "%B %-d, %Y"}}</h2>
+      </span>
+    </div>
     {%else%}
-      <a href="{{ site.baseurl }}/" class="ui small centered circular image">
-        <img src="{{site.myself-avatar}}" />
-      </a>
-      <h1 class="ui inverted ">
-        SusuFQX Blog
-      </h1>
-      <div class="main blog-part">
-        <a href="about" class="ui inverted button">ABOUT</a>
-      </div>
+    <a href="{{ site.baseurl }}/" class="ui small centered circular image">
+      <img src="{{site.myself-avatar}}" />
+    </a>
+    <h1 class="ui inverted ">
+      SusuFQX Blog
+    </h1>
+    <div class="main blog-part">
+      <a href="about" class="ui inverted button">ABOUT</a>
+    </div>
     {%endif%}
   </div>
 </header>
 <script>
-$(document)
-  .ready(function() {
-    $('.main-menu')
-      .visibility({
-        once: false,
-        onBottomPassed: function() {
-          $('.following-menu').transition('fade in');
-        },
-        onBottomPassedReverse: function() {
-          $('.following-menu').transition('fade out');
-        }
+  $(document)
+    .ready(function() {
+      $('.main-menu')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.following-menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.following-menu').transition('fade out');
+          }
+        });
+      $('.toc.right.floated').click(function() {
+        $('.ui.sidebar')
+          .sidebar('toggle');
       });
-    $('.toc.right.floated').click(function() {
-      $('.ui.sidebar')
-        .sidebar('toggle');
     });
-  });
 </script>

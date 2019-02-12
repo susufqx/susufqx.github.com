@@ -16,7 +16,7 @@ highlighter: rouge
 plugins: [jekyll-paginate]
 
 # Sidebar settings
-sidebar: true  #add sidebar
+sidebar: true  # add sidebar
 sidebar-about-description: "Do myself, simple life with heart."
 #the images
 myself-avatar: /images/myself.jpg

@@ -2,7 +2,7 @@
 layout: post
 title: "发布Node版本的dota2-api的NPM包"
 date: 2017-08-30 12:42
-categories: blog
+categories: Node
 header-img: /images/paris.jpg
 tags:
 - Node.JS

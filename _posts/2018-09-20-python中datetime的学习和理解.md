@@ -2,7 +2,7 @@
 layout: post
 title:  "python中datetime的学习和理解"
 date:   2018-08-20 09:21
-categories: blog
+categories: Python
 header-img: /images/paris.jpg
 tags:
     - Python

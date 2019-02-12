@@ -60,7 +60,7 @@ body{
   height: 54px;
 }
 .ui.menu.following-menu{
-  opacity: 0.7;
+  // opacity: 0.7;
   height: 54px;
 }
 .toc.right.floated{
@@ -207,57 +207,59 @@ body{
 @charset "utf-8";
 /* footer style */
 
-@media only screen and(min-width:992px){
-  .doubling.stackable.two.column.ui.grid.container.post-part {
-    padding-left: 8em;
-  }
-}
-
-.doubling.stackable.two.column.ui.grid.container.post-part {
-  padding-top: 4em;
-  .twelve.wide.column{
-    .post-preview{
-      padding-bottom:4em !important;
-      p{
-        font-size: 16px !important;
-      }
-      .header {
-        .description {
-          font-weight: normal;
-        }
-      }
-      .metadata {
-        span {
-          color: gray;
-          font-weight: bold;
-        }
+// @media only screen and(min-width:992px){
+//   .doubling.stackable.two.column.ui.grid.post-part {
+//     padding-left: 8em;
+//   }
+// }
+//
+// .doubling.stackable.two.column.ui.grid.post-part {
+//   padding-top: 4em;
+//
+// }
+.main.ui.container{
+  .post-preview{
+    padding-left: 300px;
+    padding-bottom:4em !important;
+    p{
+      font-size: 16px !important;
+    }
+    .header {
+      .description {
+        font-weight: normal;
       }
     }
-    .pager.row {
-      padding-bottom: 5em;
-      .ui.basic.primary.button:hover{
-        background-color: #0E6EB8 !important;
-        color: #FFFFFF !important;
+    .metadata {
+      span {
+        color: gray;
         font-weight: bold;
       }
     }
   }
-  .four.wide.right.column{
-    h3{
-      a{
-        color: #000000;
-      }
-    }
-    .ui.basic.button{
-      background-color: white !important;
-      color: #0E6EB8 !important;
-      border-color: #0E6EB8 !important;
-      margin-bottom: 0.5em !important;
-    }
-    .ui.basic.button:hover{
+  .pager.row {
+    padding-bottom: 5em;
+    .ui.basic.primary.button:hover{
       background-color: #0E6EB8 !important;
-      color: white !important;
+      color: #FFFFFF !important;
+      font-weight: bold;
     }
+  }
+}
+.four.wide.right.column{
+  h3{
+    a{
+      color: #000000;
+    }
+  }
+  .ui.basic.button{
+    background-color: white !important;
+    color: #0E6EB8 !important;
+    border-color: #0E6EB8 !important;
+    margin-bottom: 0.5em !important;
+  }
+  .ui.basic.button:hover{
+    background-color: #0E6EB8 !important;
+    color: white !important;
   }
 }
 
@@ -305,4 +307,24 @@ pre code {
 
 .ui.centered.circular {
   padding-top: 4em;
+}
+
+
+.ui.dividing.left.rail {
+  margin-left: 3em;
+  padding-top: 2em;
+  width: 319px !important;
+  right: auto;
+}
+
+.sidenav {
+    height: 100%;
+    width: 360px;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-color: #8C8C8C;
+    overflow-x: hidden;
+    top: 460px;
 }

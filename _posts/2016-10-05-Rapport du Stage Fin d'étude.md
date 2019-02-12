@@ -2,7 +2,7 @@
 layout: post
 title: "Rapport du Stage Fin d'étude"
 date: 2016-10-05 00:14
-categories: blog
+categories: Report
 header-img: /images/paris.jpg
 tags:
 - Meteor
@@ -55,9 +55,9 @@ En fait, Meteor est un framework open-source de développement web en JavaScript
 
 L’application du web a deux partis : front-end et back-end ou on peut utiliser client et serveur. Client est pour les utilisateurs et serveur est l’ordinateur qui donner le client les données et contrôler les logiques de l’application.
 
-Meteor est full-stack framework donc il a front-end et back-end. On peut écrire les deux partis en la même langage-JavsScript. Seulement JavaScript peut fonctionner dans le front-end et aussi back-end. On peut partager le code entre front-end et back-end.  C’est très bien pour les développeurs du web parce que ils n’ont pas besoin d’apprendre JavaScript pour le front-end et autre langage pour le back-end comme JavaEE, ASP.NET, PHP etc.   
+Meteor est full-stack framework donc il a front-end et back-end. On peut écrire les deux partis en la même langage-JavsScript. Seulement JavaScript peut fonctionner dans le front-end et aussi back-end. On peut partager le code entre front-end et back-end.  C’est très bien pour les développeurs du web parce que ils n’ont pas besoin d’apprendre JavaScript pour le front-end et autre langage pour le back-end comme JavaEE, ASP.NET, PHP etc.
 
-On n’a pas besoin de connaître comment Meteor fonctionner entre les deux partis. Back-end, on peut utiliser le Meteor.JS et Node.JS. En fait, Meteor.JS est seulement l’autre type de Node.  
+On n’a pas besoin de connaître comment Meteor fonctionner entre les deux partis. Back-end, on peut utiliser le Meteor.JS et Node.JS. En fait, Meteor.JS est seulement l’autre type de Node.
 
 Node est le langage de back-end mais le front-end on peut utiliser quoi ? Bien sûr, on a trois options sur le document officiel. Les trois sont Blaze.JS, Angular.JS et React.JS. Je pense que Angular.JS et React.JS sont très connu pour les ingénieurs du Web. Si on choisit Angular.JS ou React.JS, c’est facile de modifier le back-end par Meteor ou c’est facile d’utiliser autres langages du back-end. Mais dans notre projet, on a choisi Blaze qui est plus simple et seulement peut être utilisé dans Meteor. Blaze n’est pas complexe mais il est très puissant qui peut on aide d’écrire le front-end très bien. Il a le mécanisme de Template qui peut ajouter les datas dans le fichier HTML. Il a beaucoup de méthodes pour nous de faire les datas afficher dans le client mieux.
 
@@ -79,7 +79,7 @@ Après on peut saisir :
 ```shell
 $ Meteor
 ```
-Le meteor peut connecter à MongoDB, ajouter les packages et autre choses. Si tous les choses sont bien, on peut saisir « http://localhost:3000 » sur le browser et voir le web.  
+Le meteor peut connecter à MongoDB, ajouter les packages et autre choses. Si tous les choses sont bien, on peut saisir « http://localhost:3000 » sur le browser et voir le web.
 
 
 <h5 id="2.2">2.SEMANTIC-UI</h5>
@@ -250,7 +250,7 @@ Travaux =[
                 }
         ]},
     ];
-```  
+```
 C’est très long mais claire que j’ai besoin de créer le menu de ce tableau. D’abord, le buttons du menu sont :
 
 *  Rénovation & extension

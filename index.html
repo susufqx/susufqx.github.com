@@ -1,44 +1,27 @@
 ---
 layout: default
 ---
-<div class="doubling stackable two column ui grid container post-part">
-  <div class="twelve wide column">
-    <div class="ui items">
-      {% for post in paginator.posts %}
-        <div class="item post-preview">
-          <div class="content">
-            <a class="header" href="{{post.url | prepend: site.baseurl}}">
-              <h2>{{ post.title }}</h2>
-              <div class="description">
-                <p>{{ post.content | strip_html | truncate:200 }}</p>
-              </div>
-            </a>
-            <div class="metadata">
-              <span class="date">{{post.date | date: "%B %-d, %Y"}}</span>
-            </div>
-          </div>
+<div class="main ui container">
+  {% for post in paginator.posts %}
+  <div class="item post-preview">
+    <div class="content">
+      <a class="header" href="{{post.url | prepend: site.baseurl}}">
+        <h2 class="ui dividing header">{{ post.title }}</h2>
+        <div class="description">
+          <p>{{ post.content | strip_html | truncate:200 }}</p>
         </div>
-      {% endfor %}
-    </div>
-    {% if paginator.total_pages > 1 %}
-      <div class="pager row">
-        {% if paginator.previous_page %}
-          <a class="ui basic primary button left floated" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Blogs</a>
-        {% endif %}
-        {% if paginator.next_page %}
-          <a class="ui basic primary button right floated" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Blogs &rarr;</a>
-        {% endif %}
+      </a>
+      <div class="metadata">
+        <span class="date">{{post.date | date: "%B %-d, %Y"}}</span>
       </div>
-    {% endif %}
-  </div>
-  <div class="four wide right column">
-    <h3><a href="/tags">TAGS OF BLOG</a></h3>
-    <div class="ui labels">
-      {% for tag in site.tags %}
-        <a class="ui basic tiny primary button" href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
-          {{ tag[0] }}
-        </a>
-      {% endfor %}
     </div>
   </div>
+  {% endfor %}
+
 </div>
+<script>
+  $(document)
+    .ready(function() {
+
+      }
+</script>
