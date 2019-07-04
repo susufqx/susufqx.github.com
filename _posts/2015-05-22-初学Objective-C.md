@@ -2,7 +2,7 @@
 layout: post
 title: "初学Objective-C"
 date: 2015-05-22 01:11
-categories: blog
+categories: Technology
 header-img: /images/paris.jpg
 tags:
 - Objective-C

@@ -2,7 +2,7 @@
 layout: post
 title:  "Meteor框架下使用Angular4作为前端"
 date:   2017-10-17 02:04
-categories: blog
+categories: Meteor
 header-img: /images/paris.jpg
 tags:
     - Meteor
